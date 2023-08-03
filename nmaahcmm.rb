@@ -1,8 +1,8 @@
 class Nmaahcmm < Formula
   desc "Scripts for running NMAAHC microservices"
   homepage "https://github.com/NMAAHC/nmaahcmm"
-  url "https://github.com/NMAAHC/nmaahcmm/archive/refs/tags/nmaahcmm-v0.0.7.tar.gz"
-  sha256 "8dedea849e0b0ff30319ad574c2114e36e53bd93ba0a715be3e48257cabfc0a9"
+  url "https://github.com/NMAAHC/nmaahcmm/archive/refs/tags/nmaahcmm-v0.0.8.tar.gz"
+  sha256 "5b62c7aab546e3d653af1894d810e084381b13ddfadedd8294de7d38bf45ebff"
   head "https://github.com/NMAAHC/nmaahcmm.git", branch: "main"
   license ""
 
@@ -33,6 +33,7 @@ class Nmaahcmm < Formula
     bin.install "makeH264"
     bin.install "makemediainfo"
     bin.install "makemetadata"
+    bin.install "mkvnote"
     bin.install "moveDPX"
     bin.install "nmaahcmmconfig"
     bin.install "nmaahcmmfunctions"

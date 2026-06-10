@@ -15,9 +15,19 @@ class Mkvnote < Formula
 
   def install
     qt_prefix = Formula["qt"].opt_prefix
-    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_PREFIX_PATH=#{qt_prefix}", "-DCMAKE_OSX_ARCHITECTURES=arm64", *std_cmake_args
-    system "cmake", "--build", "build", "--config", "Release"
-    bin.install "build/mkvnote-gui"
+    arch_flag = Hardware::CPU.arm? ? "arm64" : "x86_64"
+
+    build_dir = buildpath/"_build"
+    build_dir.mkpath
+
+    system "cmake", "-S", ".", "-B", build_dir,
+           "-DCMAKE_PREFIX_PATH=#{qt_prefix}",
+           "-DCMAKE_OSX_ARCHITECTURES=#{arch_flag}",
+           *std_cmake_args
+
+    system "cmake", "--build", build_dir, "--config", "Release"
+
+    bin.install build_dir/"mkvnote-gui"
     bin.install "mkvnote"
   end
 end

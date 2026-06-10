@@ -3,9 +3,13 @@ class Nmaahcmm < Formula
   homepage "https://github.com/NMAAHC/nmaahcmm"
   url "https://github.com/NMAAHC/nmaahcmm/archive/refs/tags/nmaahcmm-v0.1.tar.gz"
   sha256 "fd4e7ba81005bbe0ac0f67701f80f773b3e95fd2bba5565d54bda490c2d9dbbc"
+  url "https://github.com/NMAAHC/nmaahcmm/archive/refs/tags/nmaahcmm-v0.0.9.tar.gz"
+  sha256 "e096c2eb0eaedceb0dc33d4d24fd5df2fa8992a80e761f5fa7f0c4fafcb075ab"
   head "https://github.com/NMAAHC/nmaahcmm.git", branch: "main"
   license ""
 
+  depends_on "csvprintf"
+  depends_on "csvtomd"
   depends_on "cowsay"
   depends_on "exiftool"
   depends_on "ffmpeg"

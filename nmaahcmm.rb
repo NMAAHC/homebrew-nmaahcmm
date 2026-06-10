@@ -1,6 +1,8 @@
 class Nmaahcmm < Formula
   desc "Scripts for running NMAAHC microservices"
   homepage "https://github.com/NMAAHC/nmaahcmm"
+  url "https://github.com/NMAAHC/nmaahcmm/archive/refs/tags/nmaahcmm-v0.1.tar.gz"
+  sha256 "fd4e7ba81005bbe0ac0f67701f80f773b3e95fd2bba5565d54bda490c2d9dbbc"
   url "https://github.com/NMAAHC/nmaahcmm/archive/refs/tags/nmaahcmm-v0.0.9.tar.gz"
   sha256 "e096c2eb0eaedceb0dc33d4d24fd5df2fa8992a80e761f5fa7f0c4fafcb075ab"
   head "https://github.com/NMAAHC/nmaahcmm.git", branch: "main"
@@ -20,7 +22,6 @@ class Nmaahcmm < Formula
   depends_on "xmlstarlet"
 
   def install
-    bin.install "camera_cards"
     bin.install "diffFrameMD5"
     bin.install "getduration"
     bin.install "gm.conf"
@@ -35,7 +36,6 @@ class Nmaahcmm < Formula
     bin.install "makeH264"
     bin.install "makemediainfo"
     bin.install "makemetadata"
-    bin.install "mkvnote"
     bin.install "moveDPX"
     bin.install "nmaahcmmconfig"
     bin.install "nmaahcmmfunctions"
